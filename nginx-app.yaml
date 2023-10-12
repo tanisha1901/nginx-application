@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://tanisha1901.github.io/nginx-application/
-    path: gitops-pages/nginx-application/application-manifest
+    repoURL: https://github.com/tanisha1901/nginx-application
+    path: application-manifest
     targetRevision: gitops-pages
   destination:
     namespace: nginx-application
