@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-app
+  namespace: openshift-gitops
+spec:
+  project: default
+  source:
+    repoURL: https://tanisha1901.github.io/nginx-application/
+    path: gitops-pages/nginx-application/application-manifest
+    targetRevision: gitops-pages
+  destination:
+    namespace: nginx-application
+    name: in-cluster
+  syncPolicy:
+    automated: 
+      prune: false
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
