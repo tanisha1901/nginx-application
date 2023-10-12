@@ -18,6 +18,8 @@ spec:
       containers:
       - image: quay.io/sharma_a38/nginx:latest
         name: nginx-application
+        ports:
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
